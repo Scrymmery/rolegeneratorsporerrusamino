@@ -1,0 +1,75 @@
+<!DOCTYPE HTML>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <title>Генератор анкеты для ролевой.</title>
+  <script>
+   function printresult() {
+    var text1 = document.getElementById('rawtext1').value;
+	var text2 = document.getElementById('rawtext2').value;
+	var text3 = document.getElementById('rawtext3').value;
+	var text4 = document.getElementById('rawtext4').value;
+	var text5 = document.getElementById('rawtext5').value;
+	var text6 = document.getElementById('rawtext6').value;
+	var text7 = document.getElementById('rawtext7').value;
+	var text8 = document.getElementById('rawtext8').value;
+	var text9 = document.getElementById('rawtext9').value;
+	var text10 = document.getElementById('rawtext10').value;
+	var text11 = document.getElementById('rawtext11').value;
+	var text12 = document.getElementById('rawtext12').value;
+	var doneresult = " "
+	document.getElementById('result').value = 'Для раздела "Информация"'+'\n'+'\n'+'Имя:'+text1+'\n'+'Гендер:'+text2+'\n'+'Возраст:'+text3+'\n'+'Рост:'+text4+'\n'+'Род деятельности:'+text5+'\n'+'Навыки:'+text6+'\n'+'Особенности:'+text7+'\n'+'Кодовые слова:'+text8+'\n'+'\n'+'\n'+'Для раздела "О приложении"'+'\n'+'\n'+'Раса и её краткое описание:'+'\n'+text9+'\n'+'Характер:'+'\n'+text10+'\n'+'Биография:'+'\n'+text11+'\n'+'Дополнительная Информация:'+'\n'+text12 ;
+   }
+  </script>
+ </head>
+   <style type="text/css">
+   #centerLayer {
+    margin-left: 15%; 
+    width: 85%; 
+    background: url(https://media.contentapi.ea.com/content/dam/gin/images/2017/01/spore-galactic-adventures-key-art.jpg.adapt.crop191x100.628p.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+   }
+  </style>
+  <style type="text/css">
+   #text {
+   color: white;
+   -webkit-text-stroke-width: 1px;
+   -webkit-text-stroke-color: black;
+   }
+  </style>
+ <body id="centerLayer">
+ <form name="test1" method="post" action="input1.php">
+  <p id="text" style="font-size: 30px">Имя:<Br>
+  <textarea id="rawtext1" name="comment" cols="40" rows="3" placeholder="Как зовут вашего капитана" ></textarea></p>
+  <p id="text" style="font-size: 30px">Гендер:<Br>
+  <textarea id="rawtext2" name="comment" cols="40" rows="3" placeholder="В космосе слишком много полов. Скажите нам, как обращаться к вашему капитану"></textarea></p>
+  <p id="text" style="font-size: 30px">Возраст:<Br>
+  <textarea id="rawtext3" name="comment" cols="40" rows="3" placeholder="Сколько лет вашему капитану" ></textarea></p>
+  <p id="text" style="font-size: 30px">Рост:<Br>
+  <textarea id="rawtext4" name="comment" cols="40" rows="3" placeholder="Рост вашего капитана в сантиметрах" ></textarea></p>
+  <p id="text" style="font-size: 30px">Род деятельности: <Br>
+  <textarea id="rawtext5" name="comment" cols="40" rows="3 "placeholder="Чем занимается ваш капитан, как зарабатывает на жизнь" ></textarea></p>
+  <p id="text" style="font-size: 30px">Навыки:<Br>
+  <textarea id="rawtext6" name="comment" cols="40" rows="3" placeholder="Все то, чему ваш капитан научился за свою жизнь"></textarea></p>
+  <p id="text" style="font-size: 30px">Особенности:<Br>
+  <textarea id="rawtext7" name="comment" cols="40" rows="3" placeholder="То, чем помимо вашего капитана владеет далеко не каждый"></textarea></p>
+  <p id="text" style="font-size: 30px">Кодовые слова(если анкета делается впервые):<Br>
+  <textarea id="rawtext8" name="comment" cols="40" rows="3" placeholder="Кодовые слова вы можете найти в правилах нашего сообщества, помечены как к/с"></textarea></p>
+  <p id="text" style="font-size: 30px">Ваша раса, и её краткое описание:<Br>
+  <textarea id="rawtext9" name="comment" cols="40" rows="5" placeholder="Коротко(или не очень) опишите расу вашего капитана. Её философия, особенности, культура и тому подобное"></textarea></p>
+  <p id="text" style="font-size: 30px">Характер:<Br>
+  <textarea id="rawtext10" name="comment" cols="40" rows="5" placeholder="Характер вашего капитана. Должен быть описан детально, а не добрый или злой"></textarea></p>
+  <p id="text" style="font-size: 30px">Биография:<Br>
+  <textarea id="rawtext11" name="comment" cols="40" rows="5" placeholder="Расскажите о своём капитане. Писать Не помнит, скрывает, и т.п не нужно. Галактика должна знать, что вы уже успели натворить"></textarea></p>
+  <p id="text" style="font-size: 30px">Дополнительная информцаия:<Br>
+  <textarea id="rawtext12" name="comment" cols="40" rows="5" placeholder="То, что нам еще нужно знать, но по каким-то причинам это нельзя написать в поля выше."></textarea></p>
+  <p><input type="button" value="Готово" style="width:125px;height:50px" onclick="printresult()"></p>
+  <p id="text" style="font-size: 30px">Результат:<Br>
+  <textarea id="result" rows="21" cols="90" disabled></textarea></p>
+
+ </form>
+ </body>
+</html>
